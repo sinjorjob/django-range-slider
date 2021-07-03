@@ -1,0 +1,40 @@
+.numeric-slider .ui-draggable,
+.numeric-slider .ui-droppable {
+    background-position: top;
+}
+
+.numeric-slider .ui-widget-header {
+    background: #fc58c5;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-size: 1rem 1rem
+}
+
+
+.ui-slider-range {
+    background: #4d4b4b;
+}
+
+.ui-slider-handle {
+    border-color: #b2b0b6;
+}
+
+
+.numeric-slider .value {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    margin: 0 0 0 -20px;
+    width: 40px;
+    text-align: center;
+    display: block;
+    font-weight: normal;
+}
+
+.numeric-slider {
+    text-align: center;
+
+}
+
+.numeric-slider-range-text {
+    text-align: center;
+}

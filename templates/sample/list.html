@@ -1,0 +1,52 @@
+{% extends '.\base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<h1 class="mt-3 ml-3">Django Slider</h1>
+<title>メンバー一覧画面</title>
+
+<!-- ここから追加-->
+{% crispy member_filter.form %}
+<!-- ここまで追加-->
+
+
+<table class="table table-bordered table-dark mt-3 ml-3">
+    <thead class="bg-light text-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">名前</th>
+            <th scope="col">年齢</th>
+            <th scope="col">身長</th>
+            <th scope="col">体重</th>
+            <th scope="col">出身地</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for member in member_filter.qs %}
+        <tr>
+            <td scope="row">{{member.pk}}</td>
+            <td> {{ member.name }} </td>
+            <td> {{ member.age }} </td>
+            <td> {{ member.height }} </td>
+            <td> {{ member.body_weight }} </td>
+            <td> {{ member.prefecture }} </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<style type="text/css">
+    thead,
+    tbody {
+        display: block;
+    }
+    tbody {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        height: 500px;
+    }
+    th,
+    td {
+        width: 190px;
+        min-width: 190px;
+    }
+</style>
+{% endblock %}
